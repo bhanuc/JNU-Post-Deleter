@@ -1,0 +1,20 @@
+{
+    "name": "JNU Post Deleters",
+    "version": "1.0",
+    "permissions": [
+        "tabs", "http://www.facebook.com/*", "https://www.facebook.com/*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "http://www.facebook.com/*",
+            "https://www.facebook.com/*"
+        ],
+        "js": ["jquery.js", "content.js"],
+        "run_at": "document_end" // pay attention to this line
+    }],
+    "browser_action": {
+        "default_title": "Delete post that contains JNU",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
